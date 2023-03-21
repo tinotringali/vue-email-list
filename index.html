@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="CSS/style.css">
     <!-- CSS -->
     <title>Vue Email List</title>
 </head>
 <body>
-    
-
+    <div id="app">
+        <div class="emailList">
+            <div v-show="email.length >= 10" v-for="email in email"  >
+                <h4 v-cloak>{{email}}</h4>
+            </div>
+        </div>
+    </div>
     <!-- VueJS -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!-- My JS -->
